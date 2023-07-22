@@ -1,0 +1,28 @@
+header {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+nav.menu {
+  width: auto;
+}
+
+.menu ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  list-style: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.4em;
+  width: auto;
+  color: var(--white);
+}

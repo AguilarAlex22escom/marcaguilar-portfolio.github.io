@@ -1,0 +1,133 @@
+@import "header.css";
+@import "footer.css";
+
+:root {
+  --wine: #800040;
+  --blue: #1a0896;
+  --orange: #964a08;
+  --cyan: #008d8f;
+  --green: #8c8207;
+  --white: #e2e2e2;
+  --black: rgb(34, 34, 34);
+  --font: "Nunito Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+main {
+  width: 100%;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  color: var(--white);
+  background: url(../images/background-main.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+section h1 {
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+
+section article {
+  position: relative;
+  width: 50%;
+  margin: 1px 50px;
+  padding: 2px;
+  text-align: justify;
+}
+
+article ul {
+  background-color: #1a0896;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 5px;
+}
+
+article ul li {
+  background-color: #8c8207;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+
+article ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--font);
+  font-size: 1em;
+}
+
+article ul li img {
+  width: 100px;
+}
+
+section.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(26, 8, 150, 0.5),
+    25%,
+    rgba(128, 0, 64, 0.5)
+  );
+}
+
+section.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(26, 8, 150, 0.5),
+    25%,
+    rgba(128, 0, 64, 0.5)
+  );
+}
+
+section.projects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 141, 143, 0.5),
+    25%,
+    rgba(128, 0, 64, 0.5)
+  );
+}
