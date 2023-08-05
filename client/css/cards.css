@@ -1,0 +1,219 @@
+@import url("/css/overview.css");
+
+article ul li.card .card-image {
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+article ul li.card .card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all ease-in-out 0.5s;
+}
+
+article ul li.card .card-info {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.recognations ul li.card {
+  margin: 5px;
+  padding: 10px;
+  background-color: var(--glasmorphism-background);
+  border: var(--glasmorphism-border);
+  border-radius: var(--glasmorphism-radius);
+  backdrop-filter: var(--glasmorphism-filter);
+  box-shadow: 0 0 5px var(--white), inset 0 0 10px var(--white);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.recognations ul li.card .card-image {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
+
+.recognations ul li.card .card-info {
+  top: 250px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  margin: auto;
+  backdrop-filter: unset;
+  background: linear-gradient(
+    90deg,
+    rgba(26, 8, 150, 0.5),
+    rgba(128, 0, 64, 0.5)
+  );
+  border-radius: var(--glasmorphism-radius);
+  transition: all ease-in-out 0.5s;
+}
+
+.recognations ul li.card .card-info h3,
+.recognations ul li.card .card-info p {
+  width: 95%;
+  line-height: 1.5;
+  text-shadow: 0 0 10px 5px var(--black);
+}
+
+.recognations ul li.card .card-info a {
+  position: relative;
+  text-decoration: none;
+  padding: 10px;
+  color: var(--white);
+  border: 2px solid var(--wine);
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+  box-shadow: none;
+  transition: transform ease-in-out 0.5s, box-shadow ease-in-out 0.5s 1s;
+}
+
+.recognations ul li.card .card-info a::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--cyan), var(--blue));
+  transition: all ease-in-out 0.5s 0.5s;
+}
+
+.recognations ul li:hover.card .card-info {
+  top: 0;
+  opacity: 1;
+  backdrop-filter: var(--glasmorphism-filter);
+}
+
+.recognations ul li.card .card-info a:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px 5px var(--wine);
+  /*box-shadow: 10px 0 10px 0 var(--blue), -10px 0 10px 0 var(--wine);*/
+}
+
+.recognations ul li.card .card-info a:hover::before {
+  right: 0;
+}
+
+.projects-development ul li.card {
+  position: relative;
+  width: 12rem;
+  height: 20rem;
+  margin: 20px auto;
+  border: 2px solid var(--blue);
+  border-radius: 20px;
+  box-shadow: 0 0 25px var(--blue), inset 0 0 25px var(--blue);
+  transition: all ease-in 0.5s;
+}
+
+.projects-development ul li.card .card-image {
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+}
+
+.projects-development ul li.card .card-view {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  width: 150px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.projects-development ul li.card .card-view button {
+  width: fit-content;
+  padding: 10px;
+  font-family: var(--font);
+  font-size: 1em;
+  color: var(--white);
+  background: transparent;
+  border: 2px solid var(--blue);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.projects-development ul li.card .card-view button:hover {
+  background: var(--blue);
+}
+
+.habilities .navtab aside .hability ul li.card {
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--glasmorphism-background);
+  border: var(--glasmorphism-border);
+  border-radius: var(--glasmorphism-radius);
+  backdrop-filter: var(--glasmorphism-filter);
+  box-shadow: var(--glasmorphism-shadow);
+  overflow: hidden;
+}
+
+.habilities .navtab aside .hability ul li.card picture {
+  width: 5rem;
+  margin: auto;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.habilities .navtab aside .hability ul li.card picture img {
+  position: relative;
+  width: 100%;
+}
+
+.habilities .navtab aside .hability li.card .card-info {
+  top: 200px;
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+  background: linear-gradient(
+    90deg,
+    rgba(26, 8, 150, 0.5),
+    rgba(128, 0, 64, 0.5)
+  );
+  text-shadow: 0 0 10px 5px var(--black);
+  backdrop-filter: var(--glasmorphism-filter);
+  opacity: 0;
+  transition: 0.5s cubic-bezier(0.8, 0.01, 0.22, 0.9);
+}
+
+.habilities .navtab aside .hability li.card .card-info h3,
+.habilities .navtab aside .hability li.card .card-info p {
+  padding: 5px;
+}
+
+.habilities .navtab aside .hability li.card:hover .card-info {
+  opacity: 1;
+  top: 0;
+}

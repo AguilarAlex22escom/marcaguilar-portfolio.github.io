@@ -1,0 +1,33 @@
+@import "cards.css";
+
+.certifications {
+  width: 100%;
+  min-height: 100vh;
+  height: fit-content;
+  background: var(--black);
+}
+
+.certifications article {
+  width: 60%;
+  margin: 30px 20% 20px;
+  text-align: justify;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.certifications article h2 {
+  width: 100%;
+  font-size: 2em;
+}
+
+.certifications .recognations ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-auto-rows: 250px;
+  gap: 10px;
+  list-style: none;
+  padding: 5px;
+}

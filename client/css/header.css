@@ -1,12 +1,15 @@
 header {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  width: 20%;
+  top: 0;
+  left: 0;
   z-index: 10;
+  background-color: yellowgreen;
 }
 
 nav.menu {
-  width: auto;
+  width: 80%;
+  padding: 10px;
 }
 
 .menu ul {
@@ -21,8 +24,25 @@ nav.menu {
 
 .menu ul li a {
   text-decoration: none;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: var(--font);
   font-size: 1.4em;
   width: auto;
   color: var(--white);
+  opacity: 0.6;
+  transition: 0.5s ease-in-out;
+}
+
+.menu ul li::before a {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 10px;
+  background-color: blue;
+}
+
+.menu ul li a:hover, .menu ul li a:focus-visible {
+  opacity: 1;
+  font-size: 1.6em;
 }

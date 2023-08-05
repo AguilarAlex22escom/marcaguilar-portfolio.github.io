@@ -1,0 +1,123 @@
+/* Cards overview */
+.projects-overview {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  height: fit-content;
+  display: none;
+  background: rgba(26, 26, 26, 0.8);
+  animation: showCard ease-in-out 0.5s;
+}
+
+.projects-overview ul.overviews-container li.overview {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 32rem;
+  min-height: 20rem;
+  height: fit-content;
+  padding: 20px;
+  outline: solid 1px var(--white);
+  outline-offset: -10px;
+  background-color: var(--glasmorphism-background);
+  border: var(--glasmorphism-border);
+  border-radius: var(--glasmorphism-radius);
+  box-shadow: 0 0 10px var(--white);
+  backdrop-filter: var(--glasmorphism-filter);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.projects-overview ul.overviews-container li.overview.actived {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: justify;
+  visibility: visible;
+  opacity: 1;
+  transition: all ease-in-out 0.5s;
+}
+
+.projects-overview ul.overviews-container li.overview picture {
+  width: 200px;
+  min-height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.projects-overview ul.overviews-container li.overview picture img {
+  width: 100%;
+  height: 100%;
+}
+
+.projects-overview ul.overviews-container li.overview .fa-circle-xmark {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  transition: 0.5s;
+}
+
+.projects-overview ul.overviews-container li.overview .card-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 270px;
+  padding: 10px;
+}
+
+.projects-overview ul.overviews-container li.overview .card-info h3 {
+  font-size: 2.5em;
+}
+
+.projects-overview ul.overviews-container li.overview .card-info p {
+  font-size: 1em;
+}
+
+.projects-overview ul.overviews-container li.overview .card-info p b {
+  font-size: 1.2em;
+  color: var(--blue);
+}
+
+.projects-overview ul.overviews-container li.overview .card-info a {
+  text-decoration: none;
+  padding: 10px;
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .projects-overview ul.overviews-container li.overview {
+    max-width: 16rem;
+  }
+}
+
+@keyframes showCard {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hideCard {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}
