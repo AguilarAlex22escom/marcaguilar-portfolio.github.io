@@ -1,5 +1,5 @@
 .habilities {
-  background: url(/images/backgrounds/background-projects.jpg);
+  background: url("../images/backgrounds/background-projects.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,7 +40,7 @@
   border-radius: 20px;
   transform: translateY(1);
   overflow: hidden;
-  transition: 0.5s cubic-bezier(0.8, 0.01, 0.15, 0.9);
+  transition: 0.5s var(--cubic-animation);
 }
 
 button.option:hover,
@@ -60,7 +60,7 @@ button.option::before {
   transform: scaleY(0);
   transform-origin: 0% 0%;
   background: linear-gradient(90deg, var(--wine), var(--blue));
-  transition: 0.5s cubic-bezier(0.8, 0.22, 0.01, 0.9);
+  transition: 0.5s var(--cubic-animation);
 }
 
 button.option:hover::before,
