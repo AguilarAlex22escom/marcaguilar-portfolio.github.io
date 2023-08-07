@@ -3,13 +3,21 @@ header {
   width: 20%;
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: column;
   z-index: 10;
-  background-color: yellowgreen;
 }
 
 nav.menu {
   width: 80%;
   padding: 10px;
+}
+
+header img {
+  width: 6rem;
+  margin-top: 30px;
+  margin-left: 40px;
+  opacity: 0.6;
 }
 
 .menu ul {
@@ -23,26 +31,162 @@ nav.menu {
 }
 
 .menu ul li a {
+  position: relative;
   text-decoration: none;
-  font-family: var(--font);
   font-size: 1.4em;
-  width: auto;
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
   color: var(--white);
   opacity: 0.6;
   transition: 0.5s ease-in-out;
 }
 
-.menu ul li::before a {
+.menu ul li a::before {
   content: "";
   position: absolute;
-  top: 0;
   right: 0;
-  width: 100%;
-  height: 10px;
-  background-color: blue;
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  display: block;
+  background: linear-gradient(90deg, var(--cyan), var(--white));
+  transition: 0.5s var(--cubic-animation) 0.5s;
 }
 
-.menu ul li a:hover, .menu ul li a:focus-visible {
+.menu ul li a:where(:hover, :focus-visible) {
   opacity: 1;
   font-size: 1.6em;
+}
+
+.menu ul li a:where(:hover, :focus)::before {
+  left: 0;
+  width: 100%;
+}
+
+/* Responsive menu */
+.responsive-menu {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.responsive-menu .burger-button {
+  position: absolute;
+  display: none;
+  gap: 0.3em;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--glasmorphism-background);
+  border: var(--glasmorphism-border);
+  border-radius: 5px;
+  box-shadow: var(--glasmorphism-shadow);
+  backdrop-filter: var(--glasmorphism-filter);
+  cursor: pointer;
+}
+
+.burger-button > .line {
+  width: 100%;
+  height: 4px;
+  background-color: var(--white);
+  border-radius: 5px;
+  transform-origin: left;
+  transition: 0.5s ease-in-out;
+}
+
+.burger-button.actived .line:first-child {
+  transform: rotate(45deg);
+}
+
+.burger-button.actived .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-button.actived .line:last-child {
+  transform: rotate(-45deg);
+}
+
+.responsive-menu ul {
+  visibility: visible;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: -100%;
+  z-index: -1;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--glasmorphism-background);
+  backdrop-filter: var(--glasmorphism-filter);
+  transition: 0.5s ease-in-out;
+}
+
+.responsive-menu ul.actived {
+  position: absolute;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.responsive-menu ul li {
+  width: 100%;
+  text-align: center;
+}
+
+.responsive-menu ul li a {
+  position: relative;
+  font-size: 3em;
+  color: var(--white);
+  opacity: 0.6;
+  transition: 0.5s ease-in-out;
+}
+
+.responsive-menu ul.actived li a:where(:hover, :focus-visible) {
+  font-size: 4em;
+  opacity: 1;
+}
+
+.responsive-menu ul.actived li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 8px;
+  display: block;
+  background: linear-gradient(90deg, var(--cyan), var(--white));
+  transition: 0.5s var(--cubic-animation) 0.5s;
+}
+
+.responsive-menu ul.actived li a:where(:hover, :focus)::before {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  header img {
+    visibility: hidden;
+  }
+
+  nav.menu {
+    display: none;
+  }
+  nav.responsive-menu {
+    display: flex;
+  }
+
+  .responsive-menu .burger-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }

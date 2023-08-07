@@ -67,8 +67,7 @@ article ul li.card .card-info {
   transition: all ease-in-out 0.5s;
 }
 
-.recognations ul li.card .card-info h3,
-.recognations ul li.card .card-info p {
+.recognations ul li.card .card-info:where(h3, p) {
   width: 95%;
   line-height: 1.5;
   text-shadow: 0 0 10px 5px var(--black);
@@ -152,13 +151,13 @@ article ul li.card .card-info {
 .projects-development ul li.card .card-view button {
   width: fit-content;
   padding: 10px;
-  font-family: var(--font);
   font-size: 1em;
   color: var(--white);
   background: transparent;
   border: 2px solid var(--blue);
   border-radius: 10px;
   cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
 
 .projects-development ul li.card .card-view button:hover {
@@ -205,7 +204,7 @@ article ul li.card .card-info {
   text-shadow: 0 0 10px 5px var(--black);
   backdrop-filter: var(--glasmorphism-filter);
   opacity: 0;
-  transition: 0.5s cubic-bezier(0.8, 0.01, 0.22, 0.9);
+  transition: 0.5s cubic-bezier(0.8, 0.22, 0.01, 0.9);
 }
 
 .habilities .navtab aside .hability li.card .card-info h3,

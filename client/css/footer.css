@@ -1,4 +1,5 @@
 footer {
+  position: absolute;
   width: 100%;
   min-height: 100vh;
   height: auto;
@@ -15,7 +16,6 @@ footer h1 {
 footer form {
   width: 60%;
   margin: 20px 20%;
-  font-family: var(--font);
   color: var(--white);
   font-size: 1.5em;
 }
@@ -63,13 +63,12 @@ footer form fieldset input {
   margin: 10px 20px;
   padding: 10px 15px;
   color: var(--white);
-  font-family: var(--font);
   border: 2px solid var(--cyan);
   border-radius: 10px;
   outline: none;
   background-color: transparent;
   box-shadow: 0 0 15px 10px var(--cyan), inset 0 0 10px 5px var(--cyan);
-  transition: 0.5s cubic-bezier(0.8, 0.01, 0.22, 0.9);
+  transition: all 0.5s var(--cubic-animation);
 }
 
 footer form fieldset input:hover,
@@ -88,11 +87,10 @@ footer form fieldset input[type="submit"] {
   width: 6rem;
   height: 50px;
   font-size: 1em;
-  font-family: var(--font);
   cursor: pointer;
-  background: transparent;
-  transition: background-color 0.5s cubic-bezier(0.8, 0.01, 0.22, 0.9),
-    box-shadow 0.5s cubic-bezier(0.8, 0.01, 0.22, 0.9) 0.5s;
+  background-color: var(--black);
+  transition: background-color 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out 0.5s;
 }
 
 footer form fieldset input[type="submit"]:hover {
@@ -131,9 +129,9 @@ footer article.social-networks ul li {
   border-radius: var(--glasmorphism-radius);
   box-shadow: 0 0 10px 5px var(--wine), inset 0 0 5px 2px var(--wine);
   transform: scaleY(1);
-  transition: background-color 0.5s cubic-bezier(0.8, 0.01, 0.22, 0.9),
-    transform 0.5s cubic-bezier(0.8, 0.01, 0.22, 0.9),
-    box-shadow 0.5s cubic-bezier(0.8, 0.01, 0.22, 0.9) 0.5s;
+  transition: background-color 0.5s var(--cubic-animation),
+    transform 0.5s var(--cubic-animation),
+    box-shadow 0.5s var(--cubic-animation) 0.5s;
 }
 
 footer article.social-networks ul li:hover {

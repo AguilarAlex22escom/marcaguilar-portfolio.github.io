@@ -1,4 +1,4 @@
-section.home {
+.home {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +11,7 @@ section.home {
   background-attachment: fixed;
 }
 
-section.home .presentation {
+.home .presentation {
   text-align: center;
   width: 60%;
   margin: 10px 20%;
@@ -26,25 +26,26 @@ section.home .presentation {
   border-radius: var(--glasmorphism-radius);
   backdrop-filter: var(--glasmorphism-filter);
   box-shadow: var(--glasmorphism-shadow);
+  animation: showPresentation ease-in-out 0.5s;
 }
 
-section.home .presentation h1 {
+.home .presentation h1 {
   font-size: 5rem;
   line-height: normal;
   margin: 0 20px;
 }
 
-section.home .presentation h2 {
+.home .presentation h2 {
   font-size: 3rem;
   line-height: normal;
   margin: 0 20px;
 }
 
-section.home .down {
+.home .down {
   text-decoration: none;
   width: 5em;
   height: 5em;
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 10px;
   text-align: center;
   display: flex;
@@ -57,29 +58,30 @@ section.home .down {
   border-radius: 50%;
   backdrop-filter: blur(20px);
   box-shadow: var(--glasmorphism-shadow);
+  animation: showPresentation ease-in-out 0.5s;
 }
 
-section.home .down i {
+.home .down i {
   font-size: 25px;
   animation-name: slice-down;
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
 
-section.home .down p {
+.home .down p {
   font-size: 1em;
   animation-name: slice-down;
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
 
-section.home::before {
+.home::before {
   content: "";
   position: absolute;
   top: 0;
   width: 100%;
   min-height: 100vh;
-  height: fit-content;
+  height: auto;
   background: linear-gradient(
     0deg,
     rgb(26, 26, 26),
@@ -108,7 +110,18 @@ section.home::before {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@keyframes showPresentation {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 700px) {
   section.home .presentation h2 {
     font-size: 2rem;
   }
