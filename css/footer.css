@@ -1,0 +1,156 @@
+footer {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+footer h1 {
+  width: 60%;
+  margin: 0 20%;
+  font-size: 3em;
+}
+
+footer form {
+  width: 60%;
+  margin: 20px 20%;
+  color: var(--white);
+  font-size: 1.5em;
+}
+
+footer form fieldset {
+  border-radius: 20px;
+  border: none;
+  font-size: 1em;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+footer form fieldset legend {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+footer form fieldset .names,
+footer form fieldset .phone-number {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+footer form fieldset .names label,
+footer form fieldset .phone-number label {
+  width: 80%;
+}
+
+footer form fieldset label {
+  width: 90%;
+  text-align: left;
+  margin: 10px 0;
+}
+
+footer form fieldset input {
+  width: 90%;
+  height: 28px;
+  margin: 10px 20px;
+  padding: 10px 15px;
+  color: var(--white);
+  border: 2px solid var(--cyan);
+  border-radius: 10px;
+  outline: none;
+  background-color: transparent;
+  box-shadow: 0 0 15px 10px var(--cyan), inset 0 0 10px 5px var(--cyan);
+  transition: all 0.5s var(--cubic-animation);
+}
+
+footer form fieldset input:hover,
+footer form fieldset input:focus {
+  box-shadow: 0 0 30px 20px var(--cyan), inset 0 0 15px 10px var(--cyan);
+}
+
+footer form fieldset input::placeholder {
+  font-size: 1.2em;
+  color: var(--white);
+  transform: translateY(0);
+}
+
+footer form fieldset input[type="submit"] {
+  margin: 30px 0;
+  width: 6rem;
+  height: 50px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: var(--black);
+  transition: background-color 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out 0.5s;
+}
+
+footer form fieldset input[type="submit"]:hover {
+  background-color: var(--cyan);
+}
+
+footer article.social-networks {
+  background-color: var(--black);
+  width: 60%;
+  height: auto;
+  margin: 10px 20%;
+}
+
+footer article.social-networks h2 {
+  font-size: 2em;
+}
+
+footer article.social-networks ul {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+footer article.social-networks ul li {
+  margin: 10px;
+  padding: 10px;
+  width: 4rem;
+  background-color: rgba(128, 0, 64, 0.5);
+  border: 2px solid var(--wine);
+  border-radius: var(--glasmorphism-radius);
+  box-shadow: 0 0 10px 5px var(--wine), inset 0 0 5px 2px var(--wine);
+  transform: scaleY(1);
+  transition: background-color 0.5s var(--cubic-animation),
+    transform 0.5s var(--cubic-animation),
+    box-shadow 0.5s var(--cubic-animation) 0.5s;
+}
+
+footer article.social-networks ul li:hover {
+  background-color: rgba(128, 0, 64, 0.3);
+  box-shadow: 0 0 15px 10px var(--wine), inset 0 0 10px 5px var(--wine);
+  transform: scaleY(1.2);
+}
+
+footer article.social-networks ul li a {
+  text-decoration: none;
+}
+
+footer article.social-networks ul li img {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  footer form fieldset .names,
+  footer form fieldset .phone-number {
+    width: 100%;
+  }
+}
