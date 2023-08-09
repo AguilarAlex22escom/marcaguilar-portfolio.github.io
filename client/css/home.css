@@ -4,7 +4,7 @@
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
-  background: url(../images/backgrounds/background-home.jpg);
+  background: url("../images/backgrounds/background-home.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

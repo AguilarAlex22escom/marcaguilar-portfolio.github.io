@@ -32,7 +32,7 @@
   backdrop-filter: var(--glasmorphism-filter);
   visibility: hidden;
   opacity: 0;
-  transition: 0.5s;
+  transition: all 0.5s ease-in-out;
 }
 
 .projects-overview ul.overviews-container li.overview.actived {
@@ -134,8 +134,9 @@
 
 @media screen and (max-width: 500px) {
   .projects-overview {
-    width: 500px;
+    max-width: 500px;
   }
+
   .projects-overview ul.overviews-container li.overview {
     max-width: 16rem;
   }
