@@ -1,0 +1,136 @@
+.habilities {
+  background: url("../images/backgrounds/background-projects.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.habilities .navtab {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 20%;
+}
+
+.habilities .navtab .options {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--glasmorphism-background);
+  border: var(--glasmorphism-border);
+  border-radius: var(--glasmorphism-radius);
+  backdrop-filter: var(--glasmorphism-filter);
+}
+
+.habilities .navtab .options button.option {
+  font-size: 1.2rem;
+  color: var(--white);
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 20px;
+  transform: translateY(1);
+  overflow: hidden;
+  transition: 0.5s var(--cubic-animation);
+}
+
+button.option:hover,
+.option.actived {
+  box-shadow: 0 0 10px 5px var(--black);
+}
+
+button.option::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: 0% 0%;
+  background: linear-gradient(90deg, var(--wine), var(--blue));
+  transition: 0.5s var(--cubic-animation);
+}
+
+button.option:hover::before,
+.option.actived::before {
+  transform: scaleY(1);
+}
+
+/* .habilities .navtab .options button.option:hover {
+  background-color: blue;
+} */
+
+.habilities .navtab aside {
+  width: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+.habilities .navtab aside .hability {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  animation: showArticle 0.5s ease-in-out;
+}
+
+.habilities .navtab aside .hability.actived {
+  display: flex;
+}
+
+.habilities .navtab aside .hability h2 {
+  text-align: center;
+  width: 100%;
+}
+
+.habilities .navtab aside .hability ul {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 250px;
+  grid-gap: 10px;
+}
+
+section.habilities::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background: linear-gradient(
+    180deg,
+    var(--black),
+    15%,
+    rgba(128, 0, 64, 0.5),
+    50%,
+    rgba(26, 8, 150, 0.5),
+    75%,
+    var(--black)
+  );
+}
+
+@keyframes showArticle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

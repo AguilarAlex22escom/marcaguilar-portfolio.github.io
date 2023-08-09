@@ -1,0 +1,16 @@
+.projects {
+    background-color: var(--black);
+}
+
+article.projects-development ul {
+    width: 90%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background-color: var(--glasmorphism-background);
+    border: var(--glasmorphism-border);
+    border-radius: var(--glasmorphism-radius); */
+  }
+  

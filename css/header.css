@@ -1,0 +1,276 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+nav.menu {
+  position: relative;
+  padding: 10px;
+}
+
+header img {
+  width: 6rem;
+  margin-top: 30px;
+  margin-left: 40px;
+  opacity: 0.6;
+}
+
+.menu ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  list-style: none;
+}
+
+.menu ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.4em;
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+  color: var(--white);
+  opacity: 0.6;
+  transition: 0.5s ease-in-out;
+}
+
+.menu ul li a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  display: block;
+  background: linear-gradient(90deg, var(--cyan), var(--white));
+  transition: 0.5s var(--cubic-animation) 0.5s;
+}
+
+.menu ul li a:where(:hover, :focus-visible) {
+  opacity: 1;
+  font-size: 1.6em;
+}
+
+.menu ul li a:where(:hover, :focus)::before {
+  left: 0;
+  width: 100%;
+}
+
+#translate {
+  font-size: 1rem;
+  font-family: var(--text-font);
+  color: var(--white);
+  width: 70%;
+  height: 3rem;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--glasmorphism-background);
+  border: var(--glasmorphism-border);
+  box-shadow: var(--glasmorphism-shadow);
+  backdrop-filter: var(--glasmorphism-filter);
+  border-radius: 10px;
+}
+
+#translate div.icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+}
+
+#translate div.icon i {
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  cursor: pointer;
+}
+
+#translate li {
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#translate li p {
+  padding-left: 10px;
+  text-align: center;
+  width: 40%;
+}
+
+#translate li picture {
+  width: 30px;
+  height: 30px;
+}
+
+#translate li picture img {
+  margin: auto;
+  width: 100%;
+}
+
+#translate div.languages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  margin: auto;
+  background-color: blue;
+}
+
+/* Responsive menu */
+.responsive-menu {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+button.burger-button {
+  position: fixed;
+  display: none;
+  gap: 0.3em;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--glasmorphism-background);
+  border: var(--glasmorphism-border);
+  border-radius: 5px;
+  box-shadow: var(--glasmorphism-shadow);
+  backdrop-filter: var(--glasmorphism-filter);
+  cursor: pointer;
+}
+
+.burger-button > .line {
+  width: 100%;
+  height: 4px;
+  background-color: var(--white);
+  border-radius: 5px;
+  transform-origin: left;
+  transition: 0.5s ease-in-out;
+}
+
+.burger-button.actived .line:first-child {
+  transform: rotate(45deg);
+}
+
+.burger-button.actived .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-button.actived .line:last-child {
+  transform: rotate(-45deg);
+}
+
+.responsive-menu ul {
+  visibility: visible;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: var(--glasmorphism-filter);
+}
+
+.responsive-menu ul.actived {
+  position: absolute;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.responsive-menu ul li {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.responsive-menu ul li a {
+  position: relative;
+  font-size: 3em;
+  color: var(--white);
+  opacity: 0.6;
+  transition: 0.5s ease-in-out;
+}
+
+.responsive-menu.actived ul li a:where(:hover, :focus-visible) {
+  font-size: 4em;
+  opacity: 1;
+}
+
+.responsive-menu.actived ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 8px;
+  display: block;
+  background: linear-gradient(90deg, var(--cyan), var(--white));
+  transition: 0.5s var(--cubic-animation) 0.5s;
+}
+
+.responsive-menu.actived ul li a:where(:hover, :focus)::before {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    left: -100%;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--glasmorphism-background);
+    transition: 0.5s var(--cubic-animation);
+  }
+
+  header.actived {
+    left: 0;
+    transition: 0.5s var(--cubic-animation);
+  }
+
+  header img {
+    visibility: hidden;
+  }
+
+  nav.menu {
+    display: none;
+  }
+
+  nav.responsive-menu {
+    display: flex;
+  }
+
+  button.burger-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+  }
+}
