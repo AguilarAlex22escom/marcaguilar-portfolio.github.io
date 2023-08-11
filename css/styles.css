@@ -94,7 +94,7 @@ h2 b {
   font-size: 1em;
   position: relative;
   font-family: var(--title-font);
-  color: var(--wine);
+  color: var(--cyan);
 }
 
 h2 b:first-child {
