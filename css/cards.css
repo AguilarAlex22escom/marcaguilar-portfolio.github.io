@@ -216,3 +216,9 @@ article ul li.card .card-info {
   opacity: 1;
   top: 0;
 }
+
+@media screen and (max-width: 500px) {
+  .projects-development ul li.card .card-view button {
+    background-color: var(--blue);
+  }
+}

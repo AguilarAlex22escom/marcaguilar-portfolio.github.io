@@ -50,7 +50,7 @@ a {
   font-family: "Nunito Sans", sans-serif;
   text-decoration: none;
   color: rgb(226, 226, 226);
-  border: 2px solid transparent;
+  border: 5px solid transparent;
   border-image: linear-gradient(90deg, rgb(128, 0, 64), rgb(26, 8, 150)) 1;
   background-color: transparent;
   overflow: hidden;

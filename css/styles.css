@@ -89,3 +89,27 @@ section article {
 article h2 {
   font-size: 2em;
 }
+
+h2 b {
+  font-size: 1em;
+  position: relative;
+  font-family: var(--title-font);
+  color: var(--cyan);
+}
+
+h2 b:first-child {
+  display: inline;
+}
+
+h2 b:last-child {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+   h2 b:first-child {
+    display: none;
+  }
+  h2 b:last-child {
+    display: inline;
+  }
+}

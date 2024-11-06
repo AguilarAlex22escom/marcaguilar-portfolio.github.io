@@ -64,6 +64,80 @@ header img {
   width: 100%;
 }
 
+#translate {
+  font-size: 1rem;
+  font-family: var(--text-font);
+  color: var(--white);
+  width: 70%;
+  height: 3rem;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--glasmorphism-background);
+  border: var(--glasmorphism-border);
+  box-shadow: var(--glasmorphism-shadow);
+  backdrop-filter: var(--glasmorphism-filter);
+  border-radius: 10px;
+}
+
+#translate div.icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+}
+
+#translate div.icon i {
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  cursor: pointer;
+}
+
+#translate li {
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#translate li p {
+  padding-left: 10px;
+  text-align: center;
+  width: 40%;
+}
+
+#translate li picture {
+  width: 30px;
+  height: 30px;
+}
+
+#translate li picture img {
+  margin: auto;
+  width: 100%;
+}
+
+#translate div.languages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  margin: auto;
+  background-color: blue;
+}
+
 /* Responsive menu */
 .responsive-menu {
   display: none;
@@ -174,12 +248,12 @@ button.burger-button {
     background-color: var(--glasmorphism-background);
     transition: 0.5s var(--cubic-animation);
   }
-  
+
   header.actived {
     left: 0;
     transition: 0.5s var(--cubic-animation);
   }
-  
+
   header img {
     visibility: hidden;
   }
